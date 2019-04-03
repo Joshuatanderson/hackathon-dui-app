@@ -1,21 +1,11 @@
 import React, { Component } from 'react';
-import GoogleMap from './GoogleMap'
+import GoogleMap from './GoogleMap';
+import data from './brdwi.json';
 
+console.log(data);
 class App extends Component {
 // https: //data.brla.gov/resource/5rji-ddnu.json?offense_desc=D W I
-
-  getData = () => {
-    fetch('https://data.brla.gov/resource/5rji-ddnu.json?$limit=50000&$offset=150')
-      .then(function (response) {
-        return response.json();
-      })
-      .then(json =>{
-        console.log(json);
-      })
-  }
   render() {
-    
-    this.getData();
 
     return (
       <div className="App">
